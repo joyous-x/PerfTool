@@ -1,0 +1,6 @@
+[normal]
+percent=3
+times=3
+interval=1000
+[process]
+names="qq.exe;notepad++.exe;"

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PerfETW", "PerfETW\PerfETW.vcproj", "{162BF8F8-979F-4152-BBA7-B124D1C40ECC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T_ETW_SelfProvider", "T_ETW_SelfProvider\T_ETW_SelfProvider.vcproj", "{9D0BE8C5-75B7-475D-A39E-C26C002D1863}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T_ETW_SystemProvider", "T_ETW_SystemProvider\T_ETW_SystemProvider.vcproj", "{AE316F01-8386-4E42-BB5F-A93BAED7A167}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PerfTool", "PerfTool\PerfTool.vcproj", "{76AE0171-525F-4550-A23A-FB4E6ECCB4B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{162BF8F8-979F-4152-BBA7-B124D1C40ECC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{162BF8F8-979F-4152-BBA7-B124D1C40ECC}.Debug|Win32.Build.0 = Debug|Win32
+		{162BF8F8-979F-4152-BBA7-B124D1C40ECC}.Release|Win32.ActiveCfg = Release|Win32
+		{162BF8F8-979F-4152-BBA7-B124D1C40ECC}.Release|Win32.Build.0 = Release|Win32
+		{9D0BE8C5-75B7-475D-A39E-C26C002D1863}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9D0BE8C5-75B7-475D-A39E-C26C002D1863}.Debug|Win32.Build.0 = Debug|Win32
+		{9D0BE8C5-75B7-475D-A39E-C26C002D1863}.Release|Win32.ActiveCfg = Release|Win32
+		{9D0BE8C5-75B7-475D-A39E-C26C002D1863}.Release|Win32.Build.0 = Release|Win32
+		{AE316F01-8386-4E42-BB5F-A93BAED7A167}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AE316F01-8386-4E42-BB5F-A93BAED7A167}.Debug|Win32.Build.0 = Debug|Win32
+		{AE316F01-8386-4E42-BB5F-A93BAED7A167}.Release|Win32.ActiveCfg = Release|Win32
+		{AE316F01-8386-4E42-BB5F-A93BAED7A167}.Release|Win32.Build.0 = Release|Win32
+		{76AE0171-525F-4550-A23A-FB4E6ECCB4B7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{76AE0171-525F-4550-A23A-FB4E6ECCB4B7}.Debug|Win32.Build.0 = Debug|Win32
+		{76AE0171-525F-4550-A23A-FB4E6ECCB4B7}.Release|Win32.ActiveCfg = Release|Win32
+		{76AE0171-525F-4550-A23A-FB4E6ECCB4B7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

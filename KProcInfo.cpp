@@ -2,13 +2,6 @@
 #include "KProcInfo.h"
 #include "GlobalFun.h"
 
-const wchar_t* g_wcsProcNames[] = 
-{
-    DefaultProcName1,
-    DefaultProcName2
-};
-DWORD g_dwProcNum = sizeof(g_wcsProcNames) / sizeof(g_wcsProcNames[0]);
-
 UINT64 FileTimeToInt64(const FILETIME& time)  
 {  
     ULARGE_INTEGER tt;
@@ -25,18 +18,18 @@ DWORD KProcInfo::RefreshProcInfo()
     dwRet = GetProcessList32(vecProc);
     if (0 != dwRet) goto Exit0;
 
-    for (DWORD i = 0; i < g_dwProcNum; i++)
+    for (DWORD i = 0; i < g_cfg.dwProcNum; i++)
     {
         DWORD dwTmp = 0;
         PROCESS_INFO_INNER inner;
 
-        dwTmp = QueryProcessID(g_wcsProcNames[i], vecProc, &inner.procInfo);
+        dwTmp = QueryProcessID(g_cfg.wcsProcNames[i].c_str(), vecProc, &inner.procInfo);
         if (0 != dwTmp) continue;
 
         dwTmp = GetProcessTimes(inner.procInfo.dwPid, &inner.procInfo);
         if (0 != dwTmp) continue;
 
-        inner.procInfo.strName = g_wcsProcNames[i];
+        inner.procInfo.strName = g_cfg.wcsProcNames[i];
         m_mapProcInfo[inner.procInfo.strName].procInfo = inner.procInfo;
     }
 

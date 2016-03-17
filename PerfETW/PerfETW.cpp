@@ -6,22 +6,6 @@
 #include "ETWConsumer.hpp"
 #include "ETWController.hpp"
 
-st_provider_filter processfilter = 
-{
-    ProcessGuid, 
-    EVENT_TRACE_TYPE_START,
-    EVENT_TRACE_TYPE_END,
-    {L"ProcessID", L"ProcessID"}
-};
-
-st_provider_filter imagefilter = 
-{
-    ImageLoadGuid, 
-    EVENT_TRACE_TYPE_LOAD,
-    EVENT_TRACE_TYPE_END,
-    {L"ProcessID", L"FileName", L"ImageBase", L"ImageSize"}
-};
-
 int _tmain(int argc, _TCHAR* argv[])
 {
     DWORD dwRet = 0;

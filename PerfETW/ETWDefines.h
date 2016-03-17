@@ -29,13 +29,3 @@ DEFINE_GUID ( /* 2cb15d1d-5fc1-11d2-abe1-00a0c911f518 */
              );
 
 
-typedef struct _st_provider_filter
-{
-    GUID    EventClass;
-    DWORD   dwActionStart;
-    DWORD   dwActionEnd;
-    const wchar_t* pcwcsPropertyNames[5];
-}st_provider_filter;
-
-extern st_provider_filter processfilter;
-extern st_provider_filter imagefilter;

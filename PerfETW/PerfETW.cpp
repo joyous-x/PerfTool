@@ -38,11 +38,7 @@ int _tmain(int argc, _TCHAR* argv[])
         goto Exit0;
     }
 
-    for (int i = 0; ; i++)
-    {
-        Sleep(6000);
-    }
-
+    getch();
     dwRet = consumer.CloseTrace();
 Exit0:
     controller.StopTrace();

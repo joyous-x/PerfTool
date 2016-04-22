@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+#include <vector>
 
 typedef struct ST_PROCESS_INFO 
 {
@@ -70,6 +72,7 @@ typedef struct ST_GLOBAL_CFG
     ST_GLOBAL_CFG() : dwPercentThreshold(0), dwTimesThreshold(0), dwInterval(0), dwProcNum(0)
     {
         wcsProcNames.clear();
+        default();
     }
 
     void default()

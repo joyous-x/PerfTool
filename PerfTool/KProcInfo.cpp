@@ -2,8 +2,9 @@
 #include "KProcInfo.h"
 #include "GlobalFun.h"
 
+GLOBAL_CFG g_cfg;
 const std::wstring* g_wcsProcNames = &g_cfg.wcsProcNames[0];
-DWORD g_dwProcNum = sizeof(g_cfg.wcsProcNames) / sizeof(g_cfg.wcsProcNames[0]);
+DWORD g_dwProcNum = g_cfg.wcsProcNames.size();
 
 UINT64 FileTimeToInt64(const FILETIME& time)  
 {  

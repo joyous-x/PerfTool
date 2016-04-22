@@ -8,12 +8,9 @@
 #include "KPerfMOnitor.h"
 #include "KCfgLoader.h"
 
-GLOBAL_CFG g_cfg;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    g_cfg.default();
-
     KCfgLoader loader;
     loader.Load(g_cfg);
 

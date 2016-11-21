@@ -187,6 +187,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\ETWProcInfoManager.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\ETWPropertyHelper.hpp"
 				>
 			</File>

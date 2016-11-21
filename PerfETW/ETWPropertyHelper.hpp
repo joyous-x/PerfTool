@@ -222,11 +222,11 @@ private:
             }
             else if (0 == wcsicmp(ori->wstrName.c_str(), m_pFilter->pcwcsPropertyNames[2]))
             {
-                pData->proc.wstrImageName = (const wchar_t*)(ori->pData);
+                pData->proc.wstrImageName = GetString(ori->pData, ori->uInType);
             }
             else if (0 == wcsicmp(ori->wstrName.c_str(), m_pFilter->pcwcsPropertyNames[3]))
             {
-                pData->proc.wstrCommandLine = (const wchar_t*)(ori->pData);
+                pData->proc.wstrCommandLine = GetString(ori->pData, ori->uInType);
             }
         }
         else if (pData->dwEventType == event_type__image)
@@ -241,10 +241,24 @@ private:
             }
             else if (0 == wcsicmp(ori->wstrName.c_str(), m_pFilter->pcwcsPropertyNames[2]))
             {
-                pData->image.wstrImageName = (const wchar_t*)(ori->pData);
+                pData->image.wstrImageName = GetString(ori->pData, ori->uInType);
             }
         }
         return 0;
+    }
+
+    std::wstring GetString(PBYTE pData, USHORT uType) 
+    {
+        if (uType == TDH_INTYPE_ANSISTRING)
+        {
+            return CA2W((char*)pData);
+        }
+        else if (uType == TDH_INTYPE_UNICODESTRING)
+        {
+            return (wchar_t*)pData;
+        }
+
+        return L"";
     }
 
 private:
